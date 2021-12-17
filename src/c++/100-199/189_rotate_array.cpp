@@ -21,6 +21,17 @@ public:
         }
     }
 
+    /**
+     * Logic to this when given the vector [3, 99, -1, -100] and k = 2.
+     * Split logic into 3 parts and 2 vector segments (one part wraps, the other shifts)
+     * Steps:
+        1. Reverse whole vector
+        -> [-100, -1, 99, 3]
+        2. Reverse the part that wrapped around
+        -> [-1, -100, 99, 3]
+        3. Reverse the part that shifted
+        -> [-1, -100, 3, 99]
+    */
     void rotate(vector<int> &nums, int k)
     {
         int n = nums.size();
